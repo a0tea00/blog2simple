@@ -1,0 +1,36 @@
+@import '_variables';
+/*
+
+atrrs
+
+*/
+@mixin menu-font(){
+	font-family: 'Roboto', sans-serif;
+    font-weight: 100; 
+}
+
+@mixin main-font(){
+font-family:  sans-serif;
+font-weight: 400; 
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+@mixin transition($attr, $len :$deafult-transition-len, $style:$deafult-transition-style){
+    -webkit-transition: unquote($attr) $len  $style;
+    transition: unquote($attr) $len  $style;
+}
+
+@mixin common-box-shadow(){
+	box-shadow:0 -1px 10px rgba(0,0,0,.7);
+}
+
+/*
+responsive util
+
+*/

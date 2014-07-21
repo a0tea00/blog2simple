@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TreyH</title>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+<style>
+
+</style>
+
+	
+</head>
+<body>
+<div class="col-0">
+        <button class="menuBtn fa fa-bars"> <span>Trey's Blog</span></button>
+    
+    <ul class="list-centered">
+         <li ><img class="img-circle" src="http://media.treyh.s3.amazonaws.com/cache/a1/d9/a1d940dad50be62aebac137577083f5a.jpg"></li>
+         <li ><span class="fa fa-twitter"></span> Follow @TreyHuang</li>
+         <li ></li>
+         <li ><a>About Me</a></li>
+    </ul>
+    <p></p>
+    <ul class="list-unstyled site-menu">
+     <li ><a href="#">Design</a></li>
+     <li ><a href="#">Play Ground</a></li>
+     <li ><a href="#">Projects</a></li>
+     <li ><a href="archive.html">Archive</a></li>
+    </ul>
+    
+    <ul class=" list-titled">
+         <li><span class="fa fa-book"></span> All Categories:</li>
+         <li ><a href="#">Category</a></li>
+         <li >Category</li>
+         <li >Category</li>
+    </ul>
+    
+    <ul class="list-titled">
+         <li><span class="fa fa-tags"></span> All tags:</li>
+         <li >Category</li>
+         <li >Category</li>
+         <li >Category</li>
+    </ul>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+    <div class=" main">
+ <div class = "pure-g-r">  
+ <div class = "pure-u-xl-18-24  pure-u-sm-1 col">
+     <div class="grid-main">
+
+         <div class="g-box-normal"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text">1Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+         <div class="g-box-normal"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text">2Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+         <div class="g-box-normal"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text">3Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+         <div class="g-box-double"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text"4>Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+         <div class="g-box-normal"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text">5Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+         <div class="g-box-normal"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text">6Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+        
+
+         
+        
+
+         <span clss="pull-right">&lt;&lt; Older </span>
+         <span clss="pull-left">Newer&gt;&gt; </span>
+
+</div><!--content-main-->
+    </div> 
+      <div class = "pure-u-xl-5-24 pure-u-sm-1 extra">
+        <div class="row">
+            <div class="extra-wrap"><a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank" title="Share on Facebook"><span class="fa fa-facebook"> <span></span></span></a></div>
+            <div class="extra-wrap"><a href=" http://twitter.com/share?text=text goes here&url=http://url goes here&hashtags=hashtag1,hashtag2,hashtag3" target="_blank" title="Share on Twitter"><span class="fa fa-twitter"></span> </a></div>
+           <div class="extra-wrap"><a href="https://plus.google.com/share?url=http%3A%2F%2Fexample.com" target="_blank" title="Share on Google Plus"><span class="fa fa-google-plus"> </span></a></div>
+            <div class="extra-wrap"><a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.website.com." title="Share by Email" target="_blank"><span class="fa fa-envelope"></span> Share on Google+</a></div>
+        </div>
+        </div><!--extra-->
+
+     
+     
+</div>
+    <div class="pure-u-xl-18-24   pure-u-sm-1 col" >     
+          <div class="cotent-bottom site-bottom" >
+
+                <p>Blog.TreyH.info is a personal website of Trey. Copyright &copy; 2014 Trey Huang.</p>
+           </div>
+        </div>
+    </div><!--main-->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+    $('.menuBtn').click(function(e){
+	$('.main').toggleClass('slided');
+	$(this).toggleClass('pulled');
+	});
+        
+    var total = 0      
+    var boxes =[]; 
+   $('div[class^=g-box-]').each(function(){
+        var weight = $(this).hasClass('g-box-double') ? 2 : 1;
+        boxes.push({"box":this, "weight":weight});
+    });
+        
+    function doGrid(){    
+        var insert_flag = false;
+        var overweight = null;
+        
+        total = boxes[0].weight;
+        
+        for (var i= 1; i < boxes.length; i++){
+            if ((boxes[i].weight === 2) && (total%4 > 2)){
+                insert_flag = true;
+                if (overweight ===null){
+                    overweight = boxes[i].box;
+                    $(overweight).css('background','#60c931');
+                }
+            }    
+            
+            if (insert_flag && (boxes[i].weight === 1)){
+                $(boxes[i].box).insertBefore($(overweight));
+                insert_flag = false;
+                overweight = null;
+            }
+            
+            total += boxes[i].weight
+            
+            
+            
+        }
+               
+    }
+       
+        doGrid();
+        
+           
+            
+
+    </script>
+</body>
+</html>

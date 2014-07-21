@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TreyH</title>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+<style>
+
+</style>
+
+	
+</head>
+<body>
+<div class="col-0">
+        <button class="menuBtn fa fa-bars"> <span>Trey's Blog</span></button>
+    
+    <ul class="list-centered">
+         <li ><img class="img-circle" src="http://media.treyh.s3.amazonaws.com/cache/a1/d9/a1d940dad50be62aebac137577083f5a.jpg"></li>
+         <li ><span class="fa fa-twitter"></span> Follow @TreyHuang</li>
+         <li ></li>
+         <li ><a>About Me</a></li>
+    </ul>
+    <p></p>
+    <ul class="list-unstyled site-menu">
+     <li ><a href="#">Design</a></li>
+     <li ><a href="#">Play Ground</a></li>
+     <li ><a href="#">Projects</a></li>
+     <li ><a href="archive.html">Archive</a></li>
+    </ul>
+    
+    <ul class=" list-titled">
+         <li><span class="fa fa-book"></span> All Categories:</li>
+         <li ><a href="#">Category</a></li>
+         <li >Category</li>
+         <li >Category</li>
+    </ul>
+    
+    <ul class="list-titled">
+         <li><span class="fa fa-tags"></span> All tags:</li>
+         <li >Category</li>
+         <li >Category</li>
+         <li >Category</li>
+    </ul>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+    <div class=" main">
+ <div class = "pure-g-r">  
+ <div class = "pure-u-xl-18-24  pure-u-sm-1 col">
+     <Article class="content-main">
+         <div class="content-header" >
+         <h1 class="h1">Binding service shared model to scopes with $watch in AngularJS</h1>
+         <div class="headline-img-wrap">
+            <img class="pure-u-lg-1-2 headline-img" src="http://media.treyh.s3.amazonaws.com/cache/30/1f/301f571f76a2fd657a04429e82106a59.jpg">
+         </div>
+             <ul class="content-attr">
+                <li ><span class="fa fa-clock-o"></span>July 18, 2014</li>  
+                <li><span class="fa fa-comments"></span><a>3 comments</a></li>
+                <li><span class="fa fa-book"></span><a>Something Category</a></li>
+                <li ><span class="fa fa-tags"></span><a>tag</a>, <a>tag</a>, <a>tag</a>, <a>tag</a>, <a>tag</a>, <a>tag</a>, <a>tag</a>,<a>tag</a>, <a>tag</a>, <a>tag</a>, <a>tag</a>, <a>tag</a>, <a>tag</a>, <a>tag</a>, </li>
+        </ul>
+         
+         </div>
+         
+         <!--<img src="http://media.treyh.s3.amazonaws.com/img/2014/07/eba4e9af9473624fb1754da48bc8ee40.jpg" style=" width:50%; height:auto;float:left; margin-right:10px; top=100px;">-->
+         
+         <p>Mobile support?
+
+Mobile Safari supports <a href="#">SVG webfonts</a> as of iOS 3.1 and Android supports otf/ttf as of version 2.2. But should your mobile users get this enhanced typographic experience? I'd recommend no. The predominant reason is due to how WebKit handles text that is awaiting a custom font via @font-face: the text is invisible. So on a low-bandwidth mobile connection, your users will see no text at all until the ~50k of font data has loaded. The Webkit team is pursuing a solution of turning on a fallback font after a few seconds have expired, but until that has landed, I wouldn't consider it fair to subject your users to such roadblocks between them and your content.
+
+Webfont services
+
+A number of services wrap the @font-face feature in an easy API, <a href="#">oftentimes letting you add a single CSS</a>oftentimes letting you add a single CSS or script line to your HTML and some configuration and you're all done. Many like WebInk, Typekit, and Fontslive will allow you to use the fonts (sometimes up to a bandwidth cap) for a monthly fee. Using these services is very convenient for the casual developer, handing off some of the complications of serving a cross-browser solution
+
+The Google Font API lets you use a small, curated set of freely licensed fonts by just linking to a stylesheet and letting Google handle the cross-browser and performance concerns. It's the fastest way to get off the ground and running with webfonts.
+
+Finding professional typefaces for <code>@font-face</code>
+
+A common surprise to designers is that just because you purchase a font license (to use in your graphic design, for example), that doesn't mean you can use it in @font-face. Licenses for @font-face (or web embedding) are typically sold separately. Read the agreement carefully, and feel free to contact the font foundry if you have questions.
+
+Fontspring is a font boutique, selling hundreds of quality professional fonts, all of them cleared for use with @font-face. FontFont, and other foundries, have begun selling @font-face licenses directly, though currently only targeting WOFF and EOT, which leave out a sizable (but shrinking) portion of the browser market. Many foundries are adding webfont licenses to their catalog, but if you can't find one for your chosen typeface, get in touch with them to ask about it.
+
+Dealing with FOUT
+
+The Flash of Unstyled Text is a phenomenon in Firefox and Opera that few web designers are fond of. When you apply a custom typeface via @font-face, there is a brief moment, when loading the page, where the font hasn't been downloaded and applied yet, and the next font in the font-family stack is used. This causes a flash of a different (typically less good looking) font, before it gets upgraded.
+</p>
+         <!--
+<pre>
+/*
+
+layout & override grids
+
+*/
+
+.col{
+    position: relative; // position: relative;position: relative;position: relative;position: relative;position: relative;position: relative;position: relative;position: relative;
+}
+.content-main{
+    float:right;
+    right:0;
+    max-width: 960px;
+    
+}
+.content-header{
+    margin-top:72px;
+    margin-bottom: 36px;
+}
+</pre>
+-->
+<p>
+The Flash of Unstyled Text happening to the HTML5 Slide deck.
+Accompanying the Google Font API is the WebFont Loader, a javascript library aiming to provide a number of event hooks giving you a lot of control over the loading. Let's take a look at how you can get other browsers to mimic WebKit's behavior of hiding the fallback text while the @font-face font loads.
+
+
+If JavaScript is disabled, the text will remain visible the whole time, and if the font errors somehow, it'll fall back to a basic serif safely. Consider this a stop-gap measure for now; most webfont experts desire hiding the fallback text for 2-5 seconds, then revealing it. Low-bandwidth and mobile devices benefit greatly by this timeout. Understandably, Mozilla is looking to rectify this soon.
+
+A more lightweight but less effective solution is the font-size-adjust property, currently only supported in Firefox. It gives you an opportunity to normalize x-height across a font-stack, reducing the amount of visible change in the FOUT. In fact, the Font Squirrel generator just added a feature where it tells you the x-height ratio of the fonts you upload, so you can accurately set the font-size-adjust value.
+
+Summary
+
+Webfonts deliver quite a bit of freedom to designers and with upcoming features like discretionary ligatures and stylistic alternates, they will have a lot more flexibility. For now, you can feel confident implementing this part of CSS3 as it covers 98% of deployed browsers. Enjoy!</p>
+     </Article>
+        
+ </div>   
+    <div class = "pure-u-xl-5-24 pure-u-sm-1 extra">
+        <div class="row">
+            <div class="extra-wrap"><a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank" title="Share on Facebook"><span class="fa fa-facebook"></span></a></div>
+            <div class="extra-wrap"><a href=" http://twitter.com/share?text=text goes here&url=http://url goes here&hashtags=hashtag1,hashtag2,hashtag3" target="_blank" title="Share on Twitter"><span class="fa fa-twitter" ></span></a></div>
+           <div class="extra-wrap"><a href="https://plus.google.com/share?url=http%3A%2F%2Fexample.com" target="_blank" title="Share on Google Plus"><span class="fa fa-google-plus"></span></a></div>
+            <div class="extra-wrap"><a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.website.com." title="Share by Email" target="_blank"><span class="fa fa-envelope"></span></a></div>
+        </div>
+       <div class="row">
+            <div class="content-extra">
+                <h2 class="h2">Photos:</h2>
+                <ul class="list-unstyled">
+                    <li class="thumbnail-wrap"><a href="http://media.treyh.s3.amazonaws.com/img/2014/07/eba4e9af9473624fb1754da48bc8ee40.jpg"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/img/2014/07/eba4e9af9473624fb1754da48bc8ee40.jpg">
+                        <span class="fa fa-external-link"></span></a>
+                    </li>
+                      <li class="thumbnail-wrap"><a href="http://media.treyh.s3.amazonaws.com/img/2014/07/eba4e9af9473624fb1754da48bc8ee40.jpg"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/cache/30/1f/301f571f76a2fd657a04429e82106a59.jpg">
+                          <span>Open Source Festival 2014 Open Source Festival 2014</span></a>
+                    </li>
+                      <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/cache/30/1f/301f571f76a2fd657a04429e82106a59.jpg">
+                    </li>
+                    <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/cache/30/1f/301f571f76a2fd657a04429e82106a59.jpg">
+                    </li>
+                    <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/img/2014/07/eba4e9af9473624fb1754da48bc8ee40.jpg">
+                    </li>
+                    <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/cache/30/1f/301f571f76a2fd657a04429e82106a59.jpg">
+                    </li>
+                </ul>
+            </div>
+            </div>
+        <div class="row">
+            <div class="content-extra">
+                <h2 class="h2">Photos:</h2>
+                <ul class="list-unstyled">
+                    <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/img/2014/07/eba4e9af9473624fb1754da48bc8ee40.jpg">
+                    </li>
+                      <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+                    </li>
+                      <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+                    </li>
+                    <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/cache/30/1f/301f571f76a2fd657a04429e82106a59.jpg">
+                    </li>
+                    <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/img/2014/07/eba4e9af9473624fb1754da48bc8ee40.jpg">
+                    </li>
+                    <li class="thumbnail-wrap"><img class="pure-u-lg-1-2" src="http://media.treyh.s3.amazonaws.com/cache/30/1f/301f571f76a2fd657a04429e82106a59.jpg">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>  
+ </div>
+<div class = "pure-g-r">  
+    <div class="pure-u-xl-18-24   pure-u-sm-1 col" >
+        
+        <div class="cotent-bottom" >
+            <h2 class="h2">Recent Post:</h2>
+            <ul class="list-inline">
+                <li>
+                <div class="g-box-normal"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text">1Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+        
+                </li>    
+                <li>
+                 <div class="g-box-normal"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text">2Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+                </li>
+            </u>
+        </div>
+        <!--<div class="cotent-bottom" >	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'treyh'; // required: replace example with your forum shortname
+		var disqus_developer = 1;
+		var disqus_identifier = 'binding-service-shared-model-to-scopes-with-watch-in-angularjs';
+		var disqus_url = 'http://django1.dev/blog/post/binding-service-shared-model-to-scopes-with-watch-in-angularjs';
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div>-->
+        
+    <div class="cotent-bottom site-bottom" >
+         
+        <p>Blog.TreyH.info is a personal website of Trey. Copyright &copy; 2014 Trey Huang.</p>
+   </div>
+        
+    </div>
+</div>        
+        
+</div><!--main-->
+        
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script>
+    $('.menuBtn').click(function(e){
+	$('.main').toggleClass('slided');
+	$(this).toggleClass('pulled');
+	});
+        
+        
+    //parascroll
+        var outerHeight = $('.headline-img-wrap').height();
+        
+        var innerHeight = $('.headline-img').height();
+        
+        var scrollDistance = (outerHeight/2) + $('.headline-img-wrap').offset().top;
+        var moveDistance = (innerHeight - outerHeight) >100 ? (innerHeight - outerHeight) : 0;
+
+        
+        console.log(moveDistance);
+        
+        
+        $('.main').scroll(function(){
+           var y =  moveDistance*(1-((scrollDistance -  $('.main').scrollTop())/scrollDistance));
+            if( moveDistance > y){
+                console.log("moving");
+                $('.headline-img').css({"top": (0-y)+"px"} );
+            }
+            
+        });
+        
+        
+    </script>
+</body>
+</html>
