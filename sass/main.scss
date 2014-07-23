@@ -39,23 +39,19 @@ body,html{
     padding: 0;
 }
 
-.col{
-    position: relative;
-}
 .content-main, .cotent-bottom,.content-extra {
     @include transition(all);
-    
-    float:none;
+    padding:0;
+	margin: auto;
+	width:80%;
     @media (min-width:$xl-break){
-        width:80%;
-        margin: auto;
-        float:right;
+        
+        max-width:980px;
+		
     }
     
     @media (max-width: $xl-break-floor){
-        padding-left:10%;
-        padding-right:10%;
-        width: 80%;
+
     }
     
 
@@ -92,19 +88,20 @@ body,html{
     }
     &:after{
         content:"";
-        clear: both;
+        clear: right;
         display: block;
     }
 }
 
 .extra {
+	padding:0;
     float: right;
     margin-top:72px;
 }
 //util
 
 .row{
-float: none;
+
 width: 100%;
 clear: both;
     
