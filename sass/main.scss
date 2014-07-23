@@ -401,7 +401,7 @@ a{
     @include transition(border);
 	
     &:hover, &:focus, &:visited{
-        color: lighten($color-set-orange,15%);
+        color: darken($color-set-orange,10%);
     }
     &:hover{
         border-bottom-color: $color-set-orange;
@@ -425,9 +425,6 @@ h1,h2,h3,h4,h5,h6{
         border-bottom:  ($default-font-size) solid $color-set-green;
     }
     
-    &:hover{
-        border-left:($default-font-size*4) solid transparent;
-    }
     
     a{
         color: inherit;
@@ -460,7 +457,8 @@ h1,h2,h3,h4,h5,h6{
 .content-main{
     
     p{  
-    line-height: 200%;
+	font-family:"Georgia";
+    line-height: 175%;
      text-indent: $default-font-size*4;
     
         &:first-letter{
@@ -535,7 +533,8 @@ Theme
         
         li{
         margin: $default-font-size;
-        font-size: $default-font-size*1.25;
+        font-size: $default-font-size*1.1;
+		font-weight:100;
         }
         margin: $default-font-size 0;
     }
