@@ -32,7 +32,13 @@ $xl-break-floor: 1279px;
 /*
 setting
 */
+
 $deafult-transition-len:    0.5s;
 $deafult-transition-style:  ease;
 
+$site-top-height: 72px;
 $site-bar-length: 40%;
+
+$extra-warp-fa-size: $default-font-size*3;
+$extra-wrap-padding:10px;
+$extra-wrap-height:  $extra-warp-fa-size + $extra-wrap-padding*2;

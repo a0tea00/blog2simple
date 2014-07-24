@@ -48,12 +48,7 @@ body,html{
         
         max-width:980px;
 		
-    }
-    
-    @media (max-width: $xl-break-floor){
-
-    }
-    
+    } 
 
 }
 .content-header{
@@ -64,7 +59,7 @@ body,html{
     }
 
     &:first-child{
-    margin-top:72px;
+    margin-top:$site-top-height;
     }
     margin-bottom: 36px;
     
@@ -94,15 +89,23 @@ body,html{
 }
 
 .extra {
-	padding:0;
-    float: right;
-    margin-top:72px;
+
+	@media (min-width:$xl-break){
+		padding:0;
+		float: right;
+		margin-top:$site-top-height;
+	}
+	
+	
+	@media (max-width:$xl-break-floor){
+		width:100%;
+	}
 }
 //util
 
 .row{
 
-width: 100%;
+width: 100% !important;
 clear: both;
     
 }
@@ -117,7 +120,7 @@ clear: both;
 		
 	 }		
 .col-0{
-        padding-top:72px;
+        padding-top:$site-top-height;
 		position:absolute;
         width:600px;
         height: 100%;
@@ -236,18 +239,20 @@ clear: both;
         box-sizing:border-box;
         -moz-box-sizing:border-box;
         @include transition(all, 0.25s);
-        height:70px;
+        height:$extra-wrap-height;
         width:25%;
         overflow: hidden;
-        float:right;
+        
         border:0px solid #d9d8d8;
         @media (min-width:$xl-break){
-            clear:right;
+			float:right;
+			clear:right;
             &:hover{
                 width:100%;
             }
         }
         @media (max-width:$xl-break-floor){
+			float:left;
             &:hover{
             border-top:5px solid #d9d8d8;
             border-left:5px solid #d9d8d8;
@@ -255,70 +260,21 @@ clear: both;
         }
         .fa{
            
-            padding: 10px;
+            padding: $extra-wrap-padding;
             display:block;
             height: 100%;
             width:100%;
             color:#fff;
             text-align: left;
-            font-size: $default-font-size;
             
             &:before{
-            font-size:60px;
+            font-size:$extra-warp-fa-size;
             }
             @include transition(all);
         }
-       
-        
-        
-        
+         
     }
-    
-    .thumbnail-wrap{
-        height:120px;
-        width:auto;
-        float:left;
-        margin:5px;
-        background:#000;
-        position: relative;
-        
-     &:hover{
-         span{
-             opacity: 1;
-         }
-        img{
-
-            opacity: 0.5;
-        }
-     }  
-        
-     img{
-            width: auto;
-            height: 100%;
-            opacity: 1;
-     }
-    span{
-        color:#fff;
-        position:absolute;
-        top:48px;
-        left:0;
-        right:0;
-        bottom:0;
-        text-align:center;
-        font-size: 24px;
-        opacity: 0.5;
-        overflow: hidden;
-        a{  
-            
-            text-decoration: none;
-            color:inherit;
-            border: none;
-        }
-    }
-    }
-    
-        
-
+ 
 }
 
 
@@ -349,13 +305,6 @@ clear: both;
 }
 
 
-//img
-
-.img-circle{
-    border-radius: 50%;
-    display: block;
-    overflow: hidden;
-}
 /*
 
 large color & theme
@@ -434,7 +383,7 @@ h1,h2,h3,h4,h5,h6{
 
 .h2{
                 @include menu-font();               
-                font-size:$default-font-size*2.5;
+                font-size:$default-font-size*2;
                 color:$color-set-gray;
                 border-bottom: 1px dashed $color-set-gray;
                 margin: $default-font-size 0;
@@ -454,7 +403,7 @@ h1,h2,h3,h4,h5,h6{
 
 // paragraph
 
-.content-main{
+.content-body{
     
     p{  
 	font-family:"Georgia";
@@ -482,7 +431,7 @@ code, pre{
 
 pre
 {
-    border-left: ($default-font-size*3) solid $color-set-green;
+    border-left: ($default-font-size) solid $color-set-green;
 
 }
 
@@ -516,6 +465,35 @@ pre
         }
     }
 }
+
+
+/*
+	images
+
+*/
+
+.img-circle{
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+}
+
+.content-body{ 
+	img{
+	max-width:100%;
+	height:auto;
+	border: 8px solid #fff;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	@include common-box-shadow();
+	@include transition(all, 0.25s);
+	&:hover{
+		border: 0px solid #fff;
+	}
+	}
+}
+
+
 /*
 
 Theme
