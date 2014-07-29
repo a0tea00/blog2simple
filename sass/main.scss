@@ -543,12 +543,11 @@ item boxes view
     box-sizing: border-box;
     overflow: hidden;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     float: left;
     height: 240px;
     @include transform3d(scale(1));
 	@include transition(all, 0.25s);
-	
     @media (max-width:779px) {
         width:100% !important;
 
@@ -568,13 +567,16 @@ item boxes view
     .box-wrap{
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        margin: 10px;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        
+		background-color:$color-set-gray-lightest;
+        background-image: url('http://static.treyh.info/logo.png');
+		background-position:center 10px;
+		background-repeat:no-repeat;
+		
         &:hover{ 
-            
+
             .box-text{
                  display: block;
                 top: 0px;
@@ -583,7 +585,7 @@ item boxes view
                 right: 0px;
                  font-size: $default-font-size*1.5;
                 text-shadow:  2px 2px rgba(0,0,0,0.5);
-                
+
             }
         }
         
@@ -591,18 +593,27 @@ item boxes view
          .box-img{
         width:100%;
         height:auto;  
-        
 
         }
         .box-text{
             position:absolute;
             bottom: 10px;
+			left:10px;
+			right:10px;
             background: $color-set-gray-dark;
             color: #fff;
             padding: 3px;
             @include transition("background", 0.25s);
-             @include common-box-shadow();
+            @include common-box-shadow();
             font-size: inherit;
+			padding: $default-font-size;
+			padding-top:$default-font-size/2;
+			font-weight: bold !important;
+			
+			small{
+				display:block;
+				font-weight: normal;
+			}
         }
     
     }
@@ -616,6 +627,7 @@ item boxes view
 	&:hover{          
         .box-text{
 			background: rgba($color-set-orange, 0.8);
+			
 		}
 	}	
 
@@ -626,9 +638,7 @@ item boxes view
     @extend .item-box;
     .box-wrap{
         .box-text{
-            background:$color-set-green;
-            padding: $default-font-size;
-            font-weight: bold;
+            background:$color-set-green;         
         }
     }
 	&:hover{          
