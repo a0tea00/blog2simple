@@ -10,6 +10,14 @@
 
 <style>
 
+.content-body p, .content-body pre{
+	font-size:16px;
+	line-height:200%;
+}
+.content-body p{
+	font-family:Arial, serif;
+}
+
 </style>
 
 	
@@ -61,7 +69,7 @@
                 <li ><span class="fa fa-clock-o"></span>July 18, 2014</li>  
                 <li><span class="fa fa-comments"></span><a>3 comments</a></li>
                 <li><span class="fa fa-book"></span><a>Something Category</a></li>
-                <li ><span class="fa fa-tags"></span><a>javascript</a>, <a>AngularJS</a> </li>
+                <li ><span class="fa fa-tags"></span><a>javascript</a>, <a>AngularJS</a>, <a>AngularJS</a>, <a>AngularJS</a>, <a>AngularJS</a> </li>
         </ul>
          <div class="headline-img-wrap">
             <img class="headline-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
@@ -240,17 +248,21 @@ Webfonts deliver quite a bit of freedom to designers and with upcoming features 
         console.log(innerHeight);
         console.log(moveDistance);
         
-        
-        $('.main').scroll(function(){
+		if (moveDistance ===0){
+			$('.headline-img-wrap').css('height',innerHeight);
+		}
+        else{
+			$('.main').scroll(function(){
+				
 			
-		
-           var y =  moveDistance*(1-((scrollDistance -  $('.main').scrollTop())/scrollDistance));
-            if( moveDistance > y){
-                console.log("moving");
-                $('.headline-img').css({"top": (0-y)+"px"} );
-            }
-            
-        });
+			   var y =  moveDistance*(1-((scrollDistance -  $('.main').scrollTop())/scrollDistance));
+				if( moveDistance > y){
+					console.log("moving");
+					$('.headline-img').css({"top": (0-y)+"px"} );
+				}
+				
+			});
+		}
         
       });  
     </script>
