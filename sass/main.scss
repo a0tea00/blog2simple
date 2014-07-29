@@ -545,7 +545,7 @@ item boxes view
     margin: 0;
     padding: 10px;
     float: left;
-    height: 240px;
+    height: 216px;
     @include transform3d(scale(1));
 	@include transition(all, 0.25s);
     @media (max-width:779px) {
@@ -600,7 +600,7 @@ item boxes view
             bottom: 10px;
 			left:10px;
 			right:10px;
-            background: $color-set-gray-dark;
+            background: rgba($color-set-gray-dark, 0.8);
             color: #fff;
             padding: 3px;
             @include transition("background", 0.25s);
@@ -638,7 +638,7 @@ item boxes view
     @extend .item-box;
     .box-wrap{
         .box-text{
-            background:$color-set-green;         
+            background: rgba($color-set-green, 0.8);         
         }
     }
 	&:hover{          
