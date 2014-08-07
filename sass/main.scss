@@ -25,18 +25,17 @@ layout & override grids
 
     float: left;
 }
-body,html,.main{
-    height:100%;
+.main{
+
     
 }
 body,html{
+	height:100%;
     position: relative;
-    overflow: hidden;
     background:$color-set-gray-darkest;
 }
 .main{
-    overflow-x: hidden;
-    overflow-y: auto;
+
     margin: 0;
     padding: 0;
 }
@@ -122,6 +121,8 @@ clear: both;
 		
 	 }		
 .col-0{
+		position:fixed !important;
+		top:0;
         padding-top:$site-top-height;
 		position:absolute;
         width:$site-menu-width;
@@ -133,7 +134,7 @@ clear: both;
             text-shadow: 1px 1px 0 #000;
             }
         }
-        .site-menu{
+			.site-menu{
             margin:$default-font-size*3 0;
             a{
              color: #fff;
