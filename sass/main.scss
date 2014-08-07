@@ -30,10 +30,14 @@ body,html{
 	height:100%;
     position: relative;
 	overflow-x:hidden;
+	overflow-y:auto;
     background:$color-set-gray-darkest;
 }
 .main{
 	width:100%;
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:auto;
     margin: 0;
     padding: 0;
 }
@@ -62,24 +66,10 @@ body,html{
     }
     margin-bottom: 36px;
     
-    .headline-img-wrap{
-        width: 100%;
-        height: 260px;
-        position: relative;
-        overflow: hidden;
-        //border-radius: 5px;
-        @include common-box-shadow;
-        
-         .headline-img{  
-        position: absolute;
-        height: auto;  
-        width: 100%;
-        @include transition(all);
-
-    }
-   
-
-    }
+    >.headline-img-wrap{
+	   height:240px;
+	}
+		
     &:after{
         content:"";
         clear: right;
@@ -117,6 +107,9 @@ clear: both;
 		-webkit-transition: all 0.5s ease;
 		transition: all 0.5s ease ;
 		
+		>.headline-img-wrap{
+			height:50%;
+		}
 	 }		
 .col-0{
 		position:fixed !important;
@@ -363,7 +356,8 @@ h1,h2,h3,h4,h5,h6{
     font-weight: inherit;
 }
 .h1{
-    font-size:($default-font-size*2.5);
+	@include menu-font();
+    font-size:($default-font-size*3);
     border-left:0 solid transparent;
     text-transform:capitalize;
     @include transition(all);
@@ -407,7 +401,6 @@ h1,h2,h3,h4,h5,h6{
 .content-body{
     
     p{  
-	font-family:"Georgia";
     line-height: 175%;
      text-indent: $default-font-size*4;
     
@@ -493,6 +486,23 @@ pre
 	}
 	}
 }
+
+/*headline image*/
+.headline-img-wrap{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        //border-radius: 5px;
+        @include common-box-shadow;
+        
+         .headline-img{  
+        position: absolute;
+        height: auto;  
+        width: 100%;
+        @include transition(all);
+
+		}
+    }
 
 
 /*
@@ -637,7 +647,7 @@ item boxes view
     @extend .item-box;
     .box-wrap{
         .box-text{
-            background: rgba($color-set-green, 0.8);         
+            background: rgba(darken($color-set-green,7.5%), 0.8);         
         }
     }
 	&:hover{          
@@ -649,3 +659,5 @@ item boxes view
 .grid-main{
     margin: 72px 10% 0 10%;
 }
+
+/*fancy*/

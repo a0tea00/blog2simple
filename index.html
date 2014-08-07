@@ -10,10 +10,6 @@
 
 <style>
 
-.content-body p, .content-body pre{
-	line-height:200%;
-}
-
 
 </style>
 
@@ -55,6 +51,10 @@
 	<p>&nbsp;</p>
 </div>
     <div class=" main">
+	<!-- HD
+	<div class="headline-img-wrap">
+            <img class="headline-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+         </div>-->
  <div class = "pure-g-r">  
 
  <div class = "pure-u-xl-18-24  pure-u-sm-1 ">
@@ -245,7 +245,7 @@ Webfonts deliver quite a bit of freedom to designers and with upcoming features 
         
         var innerHeight = $('.headline-img').height();
         
-        var scrollDistance = (outerHeight/2) + $('.headline-img-wrap').offset().top;
+        var scrollDistance = (outerHeight) + $('.headline-img-wrap').offset().top;
         var moveDistance = (innerHeight - outerHeight) > 50 ? (innerHeight - outerHeight) : 0;
 
         //console.log(innerHeight);
@@ -255,10 +255,10 @@ Webfonts deliver quite a bit of freedom to designers and with upcoming features 
 			$('.headline-img-wrap').css('height',innerHeight);
 		}
         else{
-			$('body').scroll(function(){
-				console.log("moving");
+			$('.main').scroll(function(){
+				console.log();
 			
-			   var y =  moveDistance*(1-((scrollDistance -  $('body').scrollTop())/scrollDistance));
+			   var y =  moveDistance*(1-((scrollDistance -  $('.main').scrollTop())/scrollDistance));
 				if( moveDistance > y){
 					
 					$('.headline-img').css({"top": (0-y)+"px"} );
