@@ -594,7 +594,9 @@ item boxes view
                 right: 0px;
                  font-size: $default-font-size*1.5;
                 text-shadow:  2px 2px rgba(0,0,0,0.5);
-
+				small{
+				display:none;
+				}
             }
         }
         
@@ -636,7 +638,9 @@ item boxes view
 	&:hover{          
         .box-text{
 			background: rgba($color-set-orange, 0.8);
-			
+			a{
+				color:$color-set-green;
+			}
 		}
 	}	
 
