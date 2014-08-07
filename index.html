@@ -11,12 +11,9 @@
 <style>
 
 .content-body p, .content-body pre{
-	font-size:16px;
 	line-height:200%;
 }
-.content-body p{
-	font-family:Arial, serif;
-}
+
 
 </style>
 
@@ -251,19 +248,19 @@ Webfonts deliver quite a bit of freedom to designers and with upcoming features 
         var scrollDistance = (outerHeight/2) + $('.headline-img-wrap').offset().top;
         var moveDistance = (innerHeight - outerHeight) > 50 ? (innerHeight - outerHeight) : 0;
 
-        console.log(innerHeight);
-        console.log(moveDistance);
+        //console.log(innerHeight);
+        //console.log(moveDistance);
         
 		if (moveDistance ===0){
 			$('.headline-img-wrap').css('height',innerHeight);
 		}
         else{
-			$('.main').scroll(function(){
-				
+			$('body').scroll(function(){
+				console.log("moving");
 			
-			   var y =  moveDistance*(1-((scrollDistance -  $('.main').scrollTop())/scrollDistance));
+			   var y =  moveDistance*(1-((scrollDistance -  $('body').scrollTop())/scrollDistance));
 				if( moveDistance > y){
-					console.log("moving");
+					
 					$('.headline-img').css({"top": (0-y)+"px"} );
 				}
 				

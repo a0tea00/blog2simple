@@ -133,7 +133,7 @@ clear: both;
             }
         }
 			.site-menu{
-            margin:$default-font-size*3 0;
+            margin:$default-font-size*2 0;
             a{
              color: #fff;
             }
@@ -151,7 +151,7 @@ clear: both;
                     display: block;
                     clear:both;
                     float: none;
-                    font-size: $default-font-size*1.5;
+                    font-size: $default-font-size*1.2;
                 }
             }      
           }
@@ -363,7 +363,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: inherit;
 }
 .h1{
-    font-size:($default-font-size*3);
+    font-size:($default-font-size*2.5);
     border-left:0 solid transparent;
     text-transform:capitalize;
     @include transition(all);
@@ -397,7 +397,7 @@ h1,h2,h3,h4,h5,h6{
 
 .site-menu{
     @include menu-font();
-    font-size: $default-font-size*2.5;
+    font-size: $default-font-size*2;
 
 }
 
