@@ -1,7 +1,9 @@
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ */
+@import 'compass/css3';
 @import '_variables';
 @import '_mixins';
 @import 'pure'; 
@@ -23,24 +25,25 @@ layout & override grids
 
     float: left;
 }
-body,html,.main{
-    height:100%;
-    
-}
 body,html{
+	width:100%;
+	height:100%;
     position: relative;
-    overflow: hidden;
-    background:$color-set-gray;
+	overflow-x:hidden;
+	overflow-y:auto;
+    background:$color-set-gray-darkest;
 }
 .main{
-    overflow-x: hidden;
-    overflow-y: auto;
+	width:100%;
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:auto;
     margin: 0;
     padding: 0;
 }
 
 .content-main, .cotent-bottom,.content-extra {
-    @include transition(all);
+    //@include transition(all);
     padding:0;
 	margin: auto;
 	width:80%;
@@ -54,7 +57,7 @@ body,html{
 .content-header{
     .content-attr{
         li{
-            white-space:nowrap;
+            white-space:pre-line;
         }
     }
 
@@ -63,24 +66,10 @@ body,html{
     }
     margin-bottom: 36px;
     
-    .headline-img-wrap{
-        width: 100%;
-        height: 260px;
-        position: relative;
-        overflow: hidden;
-        //border-radius: 5px;
-        @include common-box-shadow;
-        
-         .headline-img{  
-        position: absolute;
-        height: auto;  
-        width: 100%;
-        @include transition(top);
-
-    }
-   
-
-    }
+    >.headline-img-wrap{
+	   height:240px;
+	}
+		
     &:after{
         content:"";
         clear: right;
@@ -118,8 +107,13 @@ clear: both;
 		-webkit-transition: all 0.5s ease;
 		transition: all 0.5s ease ;
 		
+		>.headline-img-wrap{
+			height:50%;
+		}
 	 }		
 .col-0{
+		position:fixed !important;
+		top:0;
         padding-top:$site-top-height;
 		position:absolute;
         width:$site-menu-width;
@@ -131,8 +125,8 @@ clear: both;
             text-shadow: 1px 1px 0 #000;
             }
         }
-        .site-menu{
-            margin:$default-font-size*3 0;
+			.site-menu{
+            margin:$default-font-size*2 0;
             a{
              color: #fff;
             }
@@ -150,7 +144,7 @@ clear: both;
                     display: block;
                     clear:both;
                     float: none;
-                    font-size: $default-font-size*1.5;
+                    font-size: $default-font-size*1.2;
                 }
             }      
           }
@@ -363,6 +357,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: inherit;
 }
 .h1{
+	@include menu-font();
     font-size:($default-font-size*3);
     border-left:0 solid transparent;
     text-transform:capitalize;
@@ -397,7 +392,7 @@ h1,h2,h3,h4,h5,h6{
 
 .site-menu{
     @include menu-font();
-    font-size: $default-font-size*2.5;
+    font-size: $default-font-size*2;
 
 }
 
@@ -407,7 +402,6 @@ h1,h2,h3,h4,h5,h6{
 .content-body{
     
     p{  
-	font-family:"Georgia";
     line-height: 175%;
      text-indent: $default-font-size*4;
     
@@ -494,6 +488,23 @@ pre
 	}
 }
 
+/*headline image*/
+.headline-img-wrap{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        //border-radius: 5px;
+        @include common-box-shadow;
+        
+         .headline-img{  
+        position: absolute;
+        height: auto;  
+        width: 100%;
+        @include transition(all);
+
+		}
+    }
+
 
 /*
 
@@ -542,10 +553,11 @@ item boxes view
     box-sizing: border-box;
     overflow: hidden;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     float: left;
-    height: 240px;
-    
+    height: 216px;
+    @include transform3d(scale(1));
+	@include transition(all, 0.25s);
     @media (max-width:779px) {
         width:100% !important;
 
@@ -559,29 +571,33 @@ item boxes view
         
     }
     &:hover{
-     @include common-box-shadow();
+     @include transform3d(scale(1.03));
+	 
     }
     .box-wrap{
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        margin: 10px;
         width: 100%;
         height: 100%;
         overflow: hidden;
-        
+		background-color:$color-set-gray-lightest;
+        background-image: url('http://static.treyh.info/logo.png');
+		background-position:center 10px;
+		background-repeat:no-repeat;
+		
         &:hover{ 
-            
+
             .box-text{
                  display: block;
                 top: 0px;
                 bottom: 0px;
                 left: 0px;
                 right: 0px;
-                 text-align: left;
-                 background: rgba($color-set-orange, 0.8);
                  font-size: $default-font-size*1.5;
                 text-shadow:  2px 2px rgba(0,0,0,0.5);
-                
+				small{
+				display:none;
+				}
             }
         }
         
@@ -589,18 +605,27 @@ item boxes view
          .box-img{
         width:100%;
         height:auto;  
-        
 
         }
         .box-text{
             position:absolute;
             bottom: 10px;
-            background: $color-set-gray-dark;
+			left:10px;
+			right:10px;
+            background: rgba($color-set-gray-dark, 0.8);
             color: #fff;
             padding: 3px;
             @include transition("background", 0.25s);
-             @include common-box-shadow();
+            @include common-box-shadow();
             font-size: inherit;
+			padding: $default-font-size;
+			padding-top:$default-font-size/2;
+			font-weight: bold !important;
+			
+			small{
+				display:block;
+				font-weight: normal;
+			}
         }
     
     }
@@ -611,6 +636,14 @@ item boxes view
 .g-box-normal{
     @extend .item-box;
     width:25%;
+	&:hover{          
+        .box-text{
+			background: rgba($color-set-orange, 0.8);
+			a{
+				color:$color-set-green;
+			}
+		}
+	}	
 
 }
 
@@ -619,12 +652,17 @@ item boxes view
     @extend .item-box;
     .box-wrap{
         .box-text{
-            background:$color-set-green;
-            padding: $default-font-size;
-            font-weight: bold;
+            background: rgba(darken($color-set-green,7.5%), 0.8);         
         }
     }
+	&:hover{          
+        .box-text{
+			background: rgba($color-set-green, 0.8);
+		}
+	}		
 }
 .grid-main{
-    margin: 72px 0 0 10%;
+    margin: 72px 10% 0 10%;
 }
+
+/*fancy*/

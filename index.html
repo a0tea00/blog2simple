@@ -3,26 +3,26 @@
 <head>
 <meta charset="utf-8">
 <title>TreyH</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="css/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 <style>
 
+
 </style>
 
 	
 </head>
 <body>
-<div class="col-0">
-        <button class="menuBtn fa fa-bars"> <span>Trey's Blog</span></button>
-    
+<button class="menuBtn fa fa-bars"> <span>Menu</span></button>
+<div class="col-0"> 
     <ul class="list-centered">
          <li ><img class="img-circle" src="http://media.treyh.s3.amazonaws.com/cache/a1/d9/a1d940dad50be62aebac137577083f5a.jpg"></li>
          <li ><span class="fa fa-twitter"></span> Follow @TreyHuang</li>
-         <li ></li>
-         <li ><a>About Me</a></li>
+         <li >This is the official Blog of Trey Huang.</li>
+         <li >Computer Science grad student at SUNY Albany. UX Design, Data Representation, Application Architecture.</li>
     </ul>
     <p></p>
     <ul class="list-unstyled site-menu">
@@ -33,14 +33,14 @@
     </ul>
     
     <ul class=" list-titled">
-         <li><span class="fa fa-book"></span> All Categories:</li>
+         <li><span class="fa fa-book"></span>Categories:</li>
          <li ><a href="#">Category</a></li>
          <li >Category</li>
          <li >Category</li>
     </ul>
     
     <ul class="list-titled">
-         <li><span class="fa fa-tags"></span> All tags:</li>
+         <li><span class="fa fa-tags"></span>tags:</li>
          <li >Category</li>
          <li >Category</li>
          <li >Category</li>
@@ -48,8 +48,13 @@
     
     <p>&nbsp;</p>
     <p>&nbsp;</p>
+	<p>&nbsp;</p>
 </div>
     <div class=" main">
+	<!-- HD
+	<div class="headline-img-wrap">
+            <img class="headline-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+         </div>-->
  <div class = "pure-g-r">  
 
  <div class = "pure-u-xl-18-24  pure-u-sm-1 ">
@@ -61,7 +66,7 @@
                 <li ><span class="fa fa-clock-o"></span>July 18, 2014</li>  
                 <li><span class="fa fa-comments"></span><a>3 comments</a></li>
                 <li><span class="fa fa-book"></span><a>Something Category</a></li>
-                <li ><span class="fa fa-tags"></span><a>javascript</a>, <a>AngularJS</a> </li>
+                <li ><span class="fa fa-tags"></span><a>javascript</a>, <a>AngularJS</a>, <a>AngularJS</a>, <a>AngularJS</a>, <a>AngularJS</a> </li>
         </ul>
          <div class="headline-img-wrap">
             <img class="headline-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
@@ -180,7 +185,7 @@ Webfonts deliver quite a bit of freedom to designers and with upcoming features 
                 <li>
                 <div class="g-box-normal"><div class="box-wrap">
              <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
-             <div class="box-text">1Binding service shared model to scopes with $watch in AngularJS</div>
+             <div class="box-text">1Binding service shared model to asb asb asb scopes with $watch in AngularJS</div>
         </div></div>
         
                 </li>    
@@ -190,6 +195,12 @@ Webfonts deliver quite a bit of freedom to designers and with upcoming features 
              <div class="box-text">2Binding service shared model to scopes with $watch in AngularJS</div>
         </div></div>
                 </li>
+				<li>
+				<div class="g-box-double"><div class="box-wrap">
+             <img class="box-img" src="http://www.wallpaperfx.com/view_image/little-mix-girl-group-1920x1080-wallpaper-14867.jpg">
+             <div class="box-text"4>Binding service shared model to scopes with $watch in AngularJS</div>
+        </div></div>
+		</li>
             </u>
         </div>
 		</div>
@@ -234,23 +245,27 @@ Webfonts deliver quite a bit of freedom to designers and with upcoming features 
         
         var innerHeight = $('.headline-img').height();
         
-        var scrollDistance = (outerHeight/2) + $('.headline-img-wrap').offset().top;
+        var scrollDistance = (outerHeight) + $('.headline-img-wrap').offset().top;
         var moveDistance = (innerHeight - outerHeight) > 50 ? (innerHeight - outerHeight) : 0;
 
-        console.log(innerHeight);
-        console.log(moveDistance);
+        //console.log(innerHeight);
+        //console.log(moveDistance);
         
-        
-        $('.main').scroll(function(){
+		if (moveDistance ===0){
+			$('.headline-img-wrap').css('height',innerHeight);
+		}
+        else{
+			$('.main').scroll(function(){
+				console.log();
 			
-		
-           var y =  moveDistance*(1-((scrollDistance -  $('.main').scrollTop())/scrollDistance));
-            if( moveDistance > y){
-                console.log("moving");
-                $('.headline-img').css({"top": (0-y)+"px"} );
-            }
-            
-        });
+			   var y =  moveDistance*(1-((scrollDistance -  $('.main').scrollTop())/scrollDistance));
+				if( moveDistance > y){
+					
+					$('.headline-img').css({"top": (0-y)+"px"} );
+				}
+				
+			});
+		}
         
       });  
     </script>

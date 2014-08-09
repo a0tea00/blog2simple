@@ -7,13 +7,14 @@ Colors
 
 $color-set-gray:   lighten(#000, 33.5%);
 $color-set-gray-dark:   lighten(#000, 20%);
+$color-set-gray-darkest:   lighten(#000, 12.5%);
 $color-set-gray-light:  lighten(#000, 50%);
 $color-set-gray-lightest:  lighten(#000, 90%);
 
 $color-set-default: $color-set-gray;
 $color-set-inverse: lighten($color-set-gray,100%);
     
-$color-set-green:   #60c931;
+$color-set-green:   #9DD925;
 $color-set-orange:  #FF530D;
 $color-set-primary: $color-set-orange;
 
@@ -23,7 +24,7 @@ $code-background: $color-set-gray;
 /*
 Size
 */
-$default-font-size: 15px;
+$default-font-size: 14px;
 
 //screen size
 $xl-break:  1280px;
@@ -32,13 +33,12 @@ $xl-break-floor: 1279px;
 /*
 setting
 */
-
 $deafult-transition-len:    0.5s;
 $deafult-transition-style:  ease;
 
 $site-top-height: 72px;
 $site-bar-length: 40%;
-$site-menu-width:400px;
+$site-menu-width:310px;
 
 $extra-warp-fa-size: $default-font-size*3;
 $extra-wrap-padding:10px;
