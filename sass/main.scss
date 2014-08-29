@@ -46,10 +46,10 @@ body,html{
     //@include transition(all);
     padding:0;
 	margin: auto;
-	width:80%;
+	width:90%;
     @media (min-width:$xl-break){
         
-        max-width:980px;
+        max-width:960px;
 
     } 
 
@@ -358,7 +358,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .h1{
 	@include menu-font();
-    font-size:($default-font-size*3);
+    font-size:($default-font-size*3.5);
     border-left:0 solid transparent;
     text-transform:capitalize;
     @include transition(all);
@@ -529,7 +529,7 @@ Theme
         margin: $default-font-size 0;
     }
 
- .fa-facebook{
+.fa-facebook{
             background:#3B5999;
         }
 .fa-twitter{
@@ -538,8 +538,8 @@ Theme
 .fa-google-plus{
             background:#D34836;
         }
-.fa-envelope{
-            background:$color-set-green;
+.fa-pinterest{
+            background:#C92228;
         }
 
 /*
