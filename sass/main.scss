@@ -82,6 +82,7 @@ body,html{
 .extra {
 
 	@media (min-width:$xl-break){
+		min-width:320px;
 		position:fixed;
 		padding:0;
 		top:$site-top-height;
