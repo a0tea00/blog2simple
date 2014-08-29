@@ -54,6 +54,8 @@ body,html{
     } 
 
 }
+
+
 .content-header{
     .content-attr{
         li{
@@ -80,9 +82,10 @@ body,html{
 .extra {
 
 	@media (min-width:$xl-break){
+		position:fixed;
 		padding:0;
-		float: right;
-		margin-top:$site-top-height;
+		top:$site-top-height;
+		right:12px;
 	}
 	
 	
@@ -662,7 +665,8 @@ item boxes view
 	}		
 }
 .grid-main{
-    margin: 72px 10% 0 10%;
+    margin: $site-top-height auto $site-top-height auto;
+	max-width:1200px;
 }
 
 /*fancy*/
